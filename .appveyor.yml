@@ -10,7 +10,7 @@ build: off
 
 install:
   - chmod +x gradlew
-  - java -jar ./artifacts/app-order &
+  - java -jar ./artifacts/app-order "-Dselenide.headless=true"
 
 build_script:
   - ./gradlew test --info

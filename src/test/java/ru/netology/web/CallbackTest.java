@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 class CallbackTest {
     @Test
-    public void shouldTest() {
+    public void shouldRegisteredTest() {
         open("http://localhost:9999");
         $(By.name("name")).setValue("Руслан Скитович");
         $(By.name("phone")).setValue("+79150000000");
