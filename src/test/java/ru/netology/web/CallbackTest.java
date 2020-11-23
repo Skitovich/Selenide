@@ -19,6 +19,7 @@ class CallbackTest {
 
     }
 
+
     @Test
     public void shouldShowErrorTest() {
         open("http://localhost:9999");
