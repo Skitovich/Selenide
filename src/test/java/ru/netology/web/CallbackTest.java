@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.byAttribute;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -36,7 +37,7 @@ class CallbackTest {
         $(By.name("phone")).setValue("+79150000000");
         $(By.name("name")).setValue("Руслан Скитович");
         $(By.className("button__text")).click();
-        $("[input_invalid]").exists();
+        $(".input_invalid").should(exist);
 
     }
 }
