@@ -34,7 +34,6 @@ class CallbackTest {
     public void shouldShowErrorCheckBoxTest() {
         open("http://localhost:9999");
         $(By.name("phone")).setValue("+79150000000");
-//        $(By.className("checkbox__box")).click();
         $(By.name("name")).setValue("Руслан Скитович");
         $(By.className("button__text")).click();
         $("[input_invalid]").exists();
