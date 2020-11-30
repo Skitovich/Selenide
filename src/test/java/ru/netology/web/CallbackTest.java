@@ -29,18 +29,20 @@ class CallbackTest {
     }
 
     @Test
-    public void shouldShowErrorTestWithoutName() {
+    public void shouldShowErrorWithoutNameTest() {
         open("http://localhost:9999");
         element(By.name("phone")).setValue("+79150000000");
+        element(By.className("checkbox__box")).click();
         element(By.className("button__text")).click();
         element("[data-test-id=name] .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
 
     }
 
     @Test
-    public void shouldShowErrorTestWithoutTelephone() {
+    public void shouldShowErrorWithoutTelephoneTest() {
         open("http://localhost:9999");
         element(By.name("name")).setValue("Руслан Скитович");
+        element(By.className("checkbox__box")).click();
         element(By.className("button__text")).click();
         element("[data-test-id=phone] .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
 
